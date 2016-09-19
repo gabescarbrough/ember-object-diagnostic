@@ -23,3 +23,34 @@
 //  -  Order 1 : 2 hats ($5 each)
 //  -  Order 2 : 1 desk lamp ($20 each)
 //  -  Order 3 : 3 hand towels ($8 each)
+
+import Ember from 'ember';
+
+const Order = Ember.Object.extend({
+  orderPrice: this.get('unitPrice') * this.get('quantity')
+});
+
+const Cart = Ember.Object.extend({
+  addToCart: function(){
+
+  },
+  totalPrice: ,
+});
+
+let orderOne = Order.create({
+  item: 'hat',
+  unitPrice: 5,
+  quantity: 2,
+});
+
+let orderTwo = Order.create({
+  item: 'desk lamp',
+  unitPrice: 20,
+  quantity: 1,
+});
+
+let orderThree = Order.create({
+  item: 'hand towel',
+  unitPrice: 8,
+  quantity: 3,
+})
